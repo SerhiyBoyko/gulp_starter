@@ -83,7 +83,7 @@ function errorHandler(error){
 gulp.task('pug', function(){
 	var prettify = require('gulp-prettify');
 
-	return gulp.src('src/pug/**/!(_)*.pug') //компілюєм всі файлм, за винятком якщо вони починаються з _ (так ми будем називати файли які підключаєм)
+	return gulp.src('src/pug/**/!(_)*.pug') 
 		.pipe(plumber({errorHandler: errorHandler}))
 		.pipe(cache('html'))
 		.pipe(pug())
