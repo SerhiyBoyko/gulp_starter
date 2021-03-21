@@ -1,8 +1,8 @@
 'use strict'
 
-var fs                 = require('fs') ;
+var fs                     = require('fs') ;
 
-var gulp               = require('gulp'),
+var gulp                   = require('gulp'),
 	gutil              = require('gulp-util'),
 	plumber            = require('gulp-plumber'),
 	clean              = require('gulp-clean'),
@@ -12,14 +12,14 @@ var gulp               = require('gulp'),
 	rimraf             = require('rimraf'),
 	gulp_rimraf        = require('gulp-rimraf'),
 	cache              = require('gulp-cached'),
-	injectSvg 		   = require('gulp-inject-svg'),
+	injectSvg          = require('gulp-inject-svg'),
 	injectSvgOptions   = { base: '/src/' },
-	sourcemaps 		   = require('gulp-sourcemaps')
+	sourcemaps 	   = require('gulp-sourcemaps')
 ;
 
 
-var postcss            = require('gulp-postcss'),
-	rucksack 		   = require('rucksack-css'),
+var postcss                = require('gulp-postcss'),
+	rucksack 	   = require('rucksack-css'),
 	pixrem             = require("pixrem"),
 	partial_import     = require('postcss-partial-import'),
 	mixins             = require('postcss-sassy-mixins'),
@@ -40,24 +40,24 @@ var postcss            = require('gulp-postcss'),
 
 ;
 
-var pug                = require('gulp-pug'),
+var pug                    = require('gulp-pug'),
 	htmlHint           = require('gulp-htmlhint')
 ;
 
-var imagemin           = require('gulp-imagemin'),
+var imagemin               = require('gulp-imagemin'),
 	pngquant           = require('imagemin-pngquant'),
-	svgmin       = require('gulp-svgmin'),
-	cheerio       = require('gulp-cheerio'),
-	replace       = require('gulp-replace'),
-	svgSprite       = require('gulp-svg-sprite'),
-	postcssInlineSvg = require('postcss-inline-svg'),
+	svgmin             = require('gulp-svgmin'),
+	cheerio            = require('gulp-cheerio'),
+	replace            = require('gulp-replace'),
+	svgSprite          = require('gulp-svg-sprite'),
+	postcssInlineSvg   = require('postcss-inline-svg'),
 	iconfontCss        = require('gulp-iconfont-css')
 ;
 
 
 
 
-var watch              = require('gulp-watch'),
+var watch                  = require('gulp-watch'),
 	browserSync        = require('browser-sync').create(),
 	reload             = browserSync.reload,
 	del                = require('del'),
