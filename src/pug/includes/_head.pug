@@ -1,0 +1,22 @@
+head
+	base(href='/')
+	meta(charset='utf-8')
+	meta(http-equiv='X-UA-Compatible', content='IE=edge')
+	if(no_adaptive != true)
+		meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1")
+	else
+		meta(name="viewport", content="width=1522, maximum-scale=1")
+	block vars
+		title=(page ? pages[page].name : '')
+	meta(name='description', content='')
+	meta(name='imagetoolbar' content='no')
+	meta(http-equiv='X-UA-Compatible' content='IE=edge')
+	meta(name='msthemecompatible' content='no')
+	meta(name='cleartype' content='on')
+	meta(name='HandheldFriendly' content='True')
+	meta(name='format-detection' content='telephone=no')
+	meta(name='format-detection' content='address=no')
+
+
+	link(rel='stylesheet' href='css/style.css')
+

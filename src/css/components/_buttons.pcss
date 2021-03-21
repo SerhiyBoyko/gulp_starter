@@ -1,0 +1,36 @@
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  @media $m{
+  &{
+    width:100%;
+  }}
+}
+
+/*  add burger
+   .burger
+      div
+      div
+      div
+*/
+.burger{
+  div{
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.15s;
+  }
+  &.active{
+    div{
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    div:first-of-type + div{
+      opacity:0;
+    }
+    div + div + div{
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
+  }
+}

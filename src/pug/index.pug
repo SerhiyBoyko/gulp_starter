@@ -1,0 +1,19 @@
+doctype html
+html(lang='ru')
+    include includes/_head
+    body
+        include includes/_urls
+
+        style(type="text/css").
+            body { padding: 20px 20px 40px; width: auto; height: auto !important; min-width: 0px; box-sizing: border-box; }
+            h3 { margin: 20px 0px 20px; }
+            h3.first { margin-top: 0px; }
+
+        h3.first Pages
+
+        - var z = 1;
+        - var prev_category = false;
+        - for(var page_name in pages)
+
+        a(href=pages[page_name].url,target="_blank")!=z + '. ' + pages[page_name].title
+        - z++

@@ -1,0 +1,21 @@
+mixin header()
+  header.header&attributes(attributes)
+    .header-inner
+      .container.header-container
+        .logo-box
+          a.logo(href='#') Cozy House
+          div: span.descr Shelter for pets in Boston
+        nav
+          #menu-toggle.burger.hide-d
+            div
+            div
+            div
+          ul#toggled.menu
+            li: a(href='#about') About the shelter
+            li: a(href='#pets') Our pets
+            li: a(href='#shelter') To help the shelter
+            li: a(href='#contact') Contacts
+
+
+
+

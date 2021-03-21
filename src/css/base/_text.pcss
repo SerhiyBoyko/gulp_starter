@@ -1,0 +1,54 @@
+h1,
+h2,
+h3,
+h4,
+h5
+{
+    font-family:$secondary-font-family;
+    font-weight:$f_bold;
+}
+h1{
+    font-size: $size-h1;
+    @media $m{
+    &{
+    }}
+    @media $t,$d{
+    &{
+    }}
+}
+h2{
+    font-size:$size-h2;
+    @media $m{
+    &{
+    }}
+    @media $t,$d{
+    &{
+    }}
+}
+h3{
+    font-size:$size-h3;
+    @media $m{
+    &{
+    }}
+    @media $t,$d{
+    &{
+    }}
+}
+p{
+    font-size:$size-p;
+    @media $m{
+    &{
+    }}
+    @media $t,$d{
+    &{
+    }}
+    &:not(:last-of-type){
+        @media $m{
+        &{
+            margin-bottom:20px;
+        }}
+        @media $t,$d{
+        &{
+            margin-bottom:25px;
+        }}
+  }}

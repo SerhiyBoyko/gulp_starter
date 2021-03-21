@@ -1,0 +1,85 @@
+$m: only screen and (width<$mobile_res);
+$t: only screen and ($tablet_res<=width<$desktop_res);
+$d: only screen and (width>=$desktop_res);
+
+
+@media $m{
+&{
+}}
+@media $t{
+&{
+}}
+@media $d{
+&{
+}}
+@media $mobile{
+&{
+}}
+@media $tablet{
+&{
+}}
+@media $desktop{
+&{
+}}
+
+
+.only-d{
+    @media $mobile, $tablet{
+    &{
+        display:none !important;
+    }}
+}
+.only-t{
+    @media $mobile, $desktop{
+    &{
+        display:none!important;
+    }}
+}
+.only-m{
+    @media $desktop, $tablet{
+    &{
+        display:none!important;
+    }}
+}
+
+
+.hide{
+    display:none !important;
+}
+.hide-d{
+    @media $desktop{
+    &{
+        display:none !important;
+    }}
+}
+.hide-t{
+    @media $tablet{
+    &{
+        display:none!important;
+    }}
+}
+.hide-m{
+    @media $mobile{
+    &{
+        display:none !important;
+    }}
+}
+
+#mobile{
+    @media $tablet, $desktop{
+    &{
+        display:none;
+    }}
+}
+#tablet{
+    @media $mobile, $desktop{
+    &{
+        display:none;
+    }}
+}
+#desktop{
+    @media $mobile, $tablet{
+    &{
+        display:none;
+    }}
+}

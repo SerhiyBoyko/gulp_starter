@@ -1,0 +1,129 @@
+@font-face {
+	font-family: "icons";
+	src: url('../fonts/icons.eot');
+	src: url('../fonts/icons.eot?#iefix') format('eot'),
+		url('../fonts/icons.woff') format('woff'),
+		url('../fonts/icons.ttf') format('truetype'),
+		url('../fonts/icons.svg#icons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "icons";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; // only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@mixin icon-char($filename) {
+
+	@if $filename == ambulance {
+		content: "\E001";
+	}
+	@if $filename == ball {
+		content: "\E002";
+	}
+	@if $filename == bowl {
+		content: "\E003";
+	}
+	@if $filename == card {
+		content: "\E004";
+	}
+	@if $filename == cat-food {
+		content: "\E005";
+	}
+	@if $filename == cat {
+		content: "\E006";
+	}
+	@if $filename == envelope {
+		content: "\E007";
+	}
+	@if $filename == leash {
+		content: "\E008";
+	}
+	@if $filename == pills {
+		content: "\E009";
+	}
+	@if $filename == pin {
+		content: "\E00A";
+	}
+	@if $filename == shampoo {
+		content: "\E00B";
+	}
+	@if $filename == syringe {
+		content: "\E00C";
+	}
+	@if $filename == telephone {
+		content: "\E00D";
+	}
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	@if $insert == before {
+		&:before{
+			@if $extend == true {
+				@extend %icon;
+			} @else {
+				@include icon-styles;
+			}
+			@include icon-char($filename);
+		}
+	} @else {
+		&:after{
+			@if $extend == true {
+				@extend %icon;
+			} @else {
+				@include icon-styles;
+			}
+			@include icon-char($filename);
+		}
+	}
+}
+
+.icon-ambulance {
+	@include icon(ambulance);
+}
+.icon-ball {
+	@include icon(ball);
+}
+.icon-bowl {
+	@include icon(bowl);
+}
+.icon-card {
+	@include icon(card);
+}
+.icon-cat-food {
+	@include icon(cat-food);
+}
+.icon-cat {
+	@include icon(cat);
+}
+.icon-envelope {
+	@include icon(envelope);
+}
+.icon-leash {
+	@include icon(leash);
+}
+.icon-pills {
+	@include icon(pills);
+}
+.icon-pin {
+	@include icon(pin);
+}
+.icon-shampoo {
+	@include icon(shampoo);
+}
+.icon-syringe {
+	@include icon(syringe);
+}
+.icon-telephone {
+	@include icon(telephone);
+}

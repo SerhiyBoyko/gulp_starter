@@ -1,0 +1,5 @@
+mixin svg-icon(name)
+    svg(class="svg-icon svg-icon--" + name)&attributes(attributes)
+        use(xlink:href="images/sprite.svg#" + name)
+
+//- +svg-icon('clock')

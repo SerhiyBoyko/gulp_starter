@@ -1,0 +1,13 @@
+include _urls
+include _mixins
+doctype html
+html(lang='ru')
+    include _head
+    block vars
+    body(class=bodyClass)
+        #page
+            include ../parts/_header
+            #content
+                block page
+        include ../parts/_footer
+        include ../includes/_custom-includes
